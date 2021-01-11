@@ -23,11 +23,11 @@
 
         <div id="app" class="cds-container container">
             <!-- Disco ad esempio -->
-            <div class="cd">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Ten_Summoner%27s_Tales.jpg" alt="">
-                <h3>Ten's Summoners Tales</h3>
-                <span class="author">Sting</span>
-                <span class="year">1993</span>
+            <div class="cd" v-for="disk in diskList">
+                <img :src="disk.poster" alt="">
+                <h3>{{disk.title}}</h3>
+                <span class="author">{{disk.author}}</span>
+                <span class="year">{{disk.year}}</span>
             </div>
         </div>
         

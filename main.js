@@ -7,12 +7,14 @@ $(document).ready(function() {
 		mounted(){				
 			axios.get("https://flynn.boolean.careers/exercises/api/array/music")
 			.then(response => {
-				const disk = response.data.response;
-				console.log(disk);
-				this.diskList.push(disk);
+				const disks = response.data.response;
+				console.log(disks);
+				for (let i = 0; i < disks.length; i++) {
+					this.diskList.push(disks[i]);
+				}
+				console.log(this.diskList);
 			});	
 			
-			console.log(this.diskList);
 		}
 	})
 });
